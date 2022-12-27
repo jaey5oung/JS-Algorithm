@@ -1,0 +1,24 @@
+<!-- 77. (분수식 문제 읽기)로 계산합니다. 하지만 여러분은 이 공식을 쓰지않고 다음 공식을 사용하여 
+재귀를 이용해 조합수를 구해주는 프로그램을 작성하세요. -->
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n) {
+        let answer
+        function DFS(n) {
+          if (n === 1) return 1
+          else return n * DFS(n - 1)
+        }
+        answer = DFS(n)
+        return answer
+      }
+
+      console.log(solution(5))
+    </script>
+  </body>
+</html>
